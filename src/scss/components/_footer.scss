@@ -1,0 +1,19 @@
+@use '../base' as *;
+
+footer {
+    padding: 
+    clamp(1.25rem, 1.0714285714285714rem + 0.8928571428571428vw, 1.875rem) 
+    clamp(1.25rem, 0.3571428571428571rem + 4.464285714285714vw, 4.375rem);
+    
+    ul {
+        // max-width: 90rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.footer__link {
+    @include hover--gradient;
+}

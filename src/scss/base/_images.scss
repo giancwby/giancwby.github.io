@@ -1,0 +1,28 @@
+.emoji {
+    width: clamp(3.125rem, 1.8392857142857144rem + 6.428571428571428vw, 7.625rem);
+    margin-right: 2.5rem;
+    padding-bottom: .5rem;
+    z-index: 1;
+
+}
+
+.project {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    &__logo {
+        object-fit: contain;
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+.ui {
+    width: clamp(0.9375rem, 0.49107142857142855rem + 2.232142857142857vw, 2.5rem);
+    margin-left: 1.25rem;
+}
+
+.cta__emoji {
+    width: clamp(3.125rem, 1.8392857142857144rem + 6.428571428571428vw, 7.625rem);
+}

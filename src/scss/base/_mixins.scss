@@ -1,0 +1,40 @@
+@mixin hover--gradient {
+    background: var(--focus-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:rgb(255, 255, 255, 1);
+    width: fit-content;
+    transition: all .1s ease-in-out; 
+
+    &:hover, &:active{
+        color:rgb(255, 255, 255, 0);
+    } 
+}
+
+@mixin hover--arrow {
+    .ui {
+        transition: margin-left .1s ease-in;
+        }
+    
+        &:hover .ui {
+        margin-left: 1.5625rem;
+        }
+}
+
+@mixin heroemoji--top {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+@mixin heroemoji--behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+}

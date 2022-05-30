@@ -1,0 +1,116 @@
+@use '../../scss/base' as *;
+
+.hero {
+    display: grid;
+    gap: 1.25rem;
+    
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .hero__emoji {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: auto 0;
+        
+            .smiling {
+                @include heroemoji--top;
+            }
+                
+            .bigsmile {
+                @include heroemoji--behind;
+            }
+        
+            .devilhorns {
+                @include heroemoji--top;
+            }
+                
+            .waving {
+                @include heroemoji--behind;
+            }
+        }
+        
+        &:hover .smiling, &:hover .devilhorns {
+            opacity: 0;
+        }
+        
+        &:hover .bigsmile, &:hover .waving {
+            opacity: 1;
+        }
+    }
+}
+
+.featured {
+    display: grid;
+    gap: clamp(1.25rem, 0.7142857142857143rem + 2.6785714285714284vw, 3.125rem);
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "logo"
+    "name"
+    "image01"
+    "image02"
+    "description"
+    "link"
+    ;
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__namelink {
+        grid-area: name;
+        width: fit-content;
+        align-self: end;
+    }
+
+    &__name {
+        @include hover--gradient;
+    }
+
+    &__image01 {
+        grid-area: image01;
+    }
+
+    &__image02 {
+        grid-area: image02;
+    }
+
+    &__description {
+        grid-area: description;
+    }
+
+    &__link {
+        grid-area: link;
+    }
+
+    @include breakpoint(medium) {      
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header"
+        "name logo"
+        "image01 image02"
+        "description description"
+        "link link"
+        ;
+    }
+
+}
+
+.featured__link {
+    display: flex;
+
+    @include hover--arrow;
+}
+
+.featured__text {
+    @include hover--gradient;
+}

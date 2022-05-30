@@ -1,0 +1,47 @@
+@use '../../scss/base' as *;
+
+.cta {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    &__firstemoji, &__header, &__secondemoji {
+        grid-row: 1 / 2;
+    }    
+
+    &__secondemoji {
+        rotate: -18deg;
+        grid-column: 1 / 2;
+        justify-self: end;
+        z-index: 2;
+    }
+
+    &__header {
+        grid-column: 1 / -1;
+        z-index: 1;
+        text-align: center;
+        justify-self: center;
+        @include hover--gradient;
+    }
+
+    &__firstemoji {
+        rotate: 18deg;
+        grid-column: -2 / -1;
+        align-self: end;
+        z-index: 2;
+    }
+
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint(xlarge) {
+        grid-template-columns: repeat(7, 1fr);
+        &__secondemoji {
+            grid-column: 2 / 3;
+        }
+    
+        &__firstemoji {
+            grid-column: -3 / -2;
+        }
+    }
+}
