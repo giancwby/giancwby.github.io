@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    &__firstemoji, &__header, &__secondemoji {
+    &__firstemoji, &__link, &__secondemoji {
         grid-row: 1 / 2;
     }    
 
@@ -15,11 +15,14 @@
         z-index: 2;
     }
 
-    &__header {
+    &__link {
         grid-column: 1 / -1;
         z-index: 1;
         text-align: center;
         justify-self: center;
+    }
+
+    &__header {
         @include hover--gradient;
     }
 

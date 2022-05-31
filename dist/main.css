@@ -193,7 +193,7 @@ footer ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-.cta__firstemoji, .cta__header, .cta__secondemoji {
+.cta__firstemoji, .cta__link, .cta__secondemoji {
   grid-row: 1/2;
 }
 .cta__secondemoji {
@@ -202,11 +202,13 @@ footer ul {
   justify-self: end;
   z-index: 2;
 }
-.cta__header {
+.cta__link {
   grid-column: 1/-1;
   z-index: 1;
   text-align: center;
   justify-self: center;
+}
+.cta__header {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
