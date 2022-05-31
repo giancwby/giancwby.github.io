@@ -9,7 +9,7 @@
     }    
 
     &__secondemoji {
-        rotate: -18deg;
+        transform: rotate(-18deg);
         grid-column: 1 / 2;
         justify-self: end;
         z-index: 2;
@@ -24,7 +24,7 @@
     }
 
     &__firstemoji {
-        rotate: 18deg;
+        transform: rotate(18deg);
         grid-column: -2 / -1;
         align-self: end;
         z-index: 2;

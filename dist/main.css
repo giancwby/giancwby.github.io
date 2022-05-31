@@ -197,7 +197,7 @@ footer ul {
   grid-row: 1/2;
 }
 .cta__secondemoji {
-  rotate: -18deg;
+  transform: rotate(-18deg);
   grid-column: 1/2;
   justify-self: end;
   z-index: 2;
@@ -220,7 +220,7 @@ footer ul {
   color: rgba(255, 255, 255, 0);
 }
 .cta__firstemoji {
-  rotate: 18deg;
+  transform: rotate(18deg);
   grid-column: -2/-1;
   align-self: end;
   z-index: 2;
