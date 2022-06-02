@@ -2,6 +2,7 @@ const preloader = document.querySelector('.preloader')
 
 window.addEventListener('load', () => {
     gsap.fromTo(preloader, {opacity: 1}, {duration:1, opacity: 0, ease: 'power3'});
+    preloader.style.display = 'none';
 })
 
 gsap.registerPlugin(ScrollTrigger);
