@@ -10,7 +10,8 @@ document.querySelectorAll('section').forEach(
     (section) => {
         gsap.fromTo(section, {x:-20, opacity: 0}, {scrollTrigger: {
             trigger: section,
-            start: 'top bottom'
+            start: 'top 73%',
+            markers: true
         }, duration:1, x:0, opacity: 1, ease: 'power3'});
     }
 )
