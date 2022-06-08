@@ -2,6 +2,8 @@
 
 body {
     background-color: var(--black);
+    max-width: 1600px;
+    margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -11,6 +13,5 @@ h1, h2, h3, h4, h5, h6, p, a {
 section {
     padding: clamp(3.125rem, 2.232142857142857rem + 4.464285714285714vw, 6.25rem) 
     clamp(1.25rem, 0.3571428571428571rem + 4.464285714285714vw, 4.375rem);
-    // max-width: 90rem;
     margin-inline: auto;
 }

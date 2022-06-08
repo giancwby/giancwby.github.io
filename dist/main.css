@@ -102,6 +102,8 @@ html {
 
 body {
   background-color: var(--black);
+  max-width: 1600px;
+  margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -123,7 +125,6 @@ section {
 
 nav {
   padding: clamp(1.25rem, 1.0714285714rem + 0.8928571429vw, 1.875rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem);
-  border-bottom: 2px solid var(--white);
 }
 nav ul {
   margin-inline: auto;
