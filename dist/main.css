@@ -2,6 +2,7 @@
   --black: hsl(0, 100%, 0%);
   --white: hsl(0, 100%, 100%);
   --focus-gradient: linear-gradient(90deg, rgba(232,117,190,1) 0%, rgba(255,255,255,1) 50%, rgba(141,255,99,1) 100%);
+  --transparent: rgb(255, 255, 255, 0);
 }
 
 @font-face {
@@ -57,24 +58,13 @@ p.uppercase {
   text-transform: uppercase;
 }
 
-.emoji {
-  width: clamp(3.125rem, 1.8392857143rem + 6.4285714286vw, 7.625rem);
-  margin-right: 2.5rem;
-  padding-bottom: 0.5rem;
-  z-index: 1;
-}
-
 .project {
   max-width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.project__logo {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 100%;
-  height: 100%;
 }
 
 .ui {
@@ -84,6 +74,11 @@ p.uppercase {
 
 .cta__emoji {
   width: clamp(3.125rem, 1.8392857143rem + 6.4285714286vw, 7.625rem);
+}
+
+.arrow__large {
+  width: clamp(1.875rem, 0.8035714286rem + 5.3571428571vw, 5.625rem);
+  margin-right: 1.5625rem;
 }
 
 a, li, ul {
@@ -136,14 +131,14 @@ nav ul li a p {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 nav ul li a p:hover, nav ul li a p:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
 }
 
 footer {
@@ -160,14 +155,14 @@ footer ul {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 .footer__link:hover, .footer__link:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
 }
 
 .categories a {
@@ -180,14 +175,14 @@ footer ul {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 .categories a h2:hover, .categories a h2:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
 }
 .categories a img {
   padding-bottom: 0;
@@ -225,14 +220,14 @@ footer ul {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 .cta__header:hover, .cta__header:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
 }
 .cta__firstemoji {
   transform: rotate(18deg);
@@ -270,6 +265,12 @@ footer ul {
   top: 0;
   left: 0;
   margin: auto 0;
+}
+.hero__header .hero__emoji img {
+  width: clamp(3.125rem, 1.8392857143rem + 6.4285714286vw, 7.625rem);
+  margin-right: 2.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 1;
 }
 .hero__header .hero__emoji .smiling {
   position: relative;
@@ -317,10 +318,16 @@ footer ul {
   grid-template-rows: auto;
   grid-template-areas: "header" "logo" "name" "image01" "image02" "description" "link";
 }
+.featured img {
+  max-width: 100%;
+  height: 100%;
+}
 .featured__header {
   grid-area: header;
 }
 .featured__logo {
+  -o-object-fit: contain;
+     object-fit: contain;
   grid-area: logo;
 }
 .featured__namelink {
@@ -334,19 +341,23 @@ footer ul {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 .featured__name:hover, .featured__name:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
 }
 .featured__image01 {
+  -o-object-fit: cover;
+     object-fit: cover;
   grid-area: image01;
 }
 .featured__image02 {
+  -o-object-fit: cover;
+     object-fit: cover;
   grid-area: image02;
 }
 .featured__description {
@@ -372,17 +383,105 @@ footer ul {
 .featured__link:hover .ui {
   margin-left: 1.5625rem;
 }
+.featured__link:hover p {
+  color: var(--transparent);
+}
 
 .featured__text {
   background: var(--focus-gradient);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: all 0.1s ease-in-out;
 }
 .featured__text:hover, .featured__text:active {
-  color: rgba(255, 255, 255, 0);
+  color: var(--transparent);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, -0.1785714286rem + 7.1428571429vw, 6.25rem);
+}
+.category__header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+.category__header img {
+  width: clamp(4.4375rem, 2.7053571429rem + 8.6607142857vw, 10.5rem);
+  margin-bottom: 1rem;
+}
+@media (min-width: 43.75em) {
+  .category__header img {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 43.75em) {
+  .category__header {
+    flex-direction: row;
+  }
+}
+
+.project__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.875rem, 1.1607142857rem + 3.5714285714vw, 4.375rem);
+  padding-bottom: 0px;
+}
+@media (min-width: 43.75em) {
+  .project__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project__card a img {
+  margin-bottom: 1.875rem;
+}
+.project__card a h3 {
+  background: var(--focus-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+.project__card a h3:hover, .project__card a h3:active {
+  color: var(--transparent);
+}
+.project__card a:hover h3 {
+  color: var(--transparent);
+}
+
+.back div a {
+  display: flex;
+  flex-direction: row;
+}
+.back div a img {
+  transition: all 0.1s ease-in-out;
+}
+.back div a h2 {
+  background: var(--focus-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+.back div a h2:hover, .back div a h2:active {
+  color: var(--transparent);
+}
+.back div a:hover h2 {
+  color: var(--transparent);
+}
+.back div a:hover img {
+  transform: translateX(-0.8rem);
 }/*# sourceMappingURL=main.css.map */

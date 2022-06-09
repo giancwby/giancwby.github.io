@@ -1,13 +1,15 @@
+@use 'colors';
+
 @mixin hover--gradient {
     background: var(--focus-gradient);
     background-clip: text;
     -webkit-background-clip: text;
-    color:rgb(255, 255, 255, 1);
+    color:var(--white);
     width: fit-content;
     transition: all .1s ease-in-out; 
 
     &:hover, &:active{
-        color:rgb(255, 255, 255, 0);
+        color: var(--transparent);
     } 
 }
 
