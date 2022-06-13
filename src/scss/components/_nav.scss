@@ -1,13 +1,19 @@
 @use '../base' as *;
 
 nav {
+    position: sticky;
+    top: 0px;
+    background-color: var(--black);
+    z-index: 100;
+
     padding: 
     clamp(1.25rem, 1.0714285714285714rem + 0.8928571428571428vw, 1.875rem) 
     clamp(1.25rem, 0.3571428571428571rem + 4.464285714285714vw, 4.375rem);
+    padding-bottom: 0;
     
-    // border-bottom: 2px solid var(--white);
     ul {
-        // max-width: 90rem;
+        border-bottom: 2px solid var(--white);
+        padding-bottom: 30px;
         margin-inline: auto;
         display: flex;
         flex-direction: row;
