@@ -26,34 +26,38 @@
     }
 }
 
-
-.project__row {
-    display: grid;
-    grid-template-columns: 1fr;
+.list {
+    display: flex;
+    flex-direction: column;
     gap: clamp(1.875rem, 1.1607142857142858rem + 3.571428571428571vw, 4.375rem);
-    padding-bottom: 0px;
 
-    @include breakpoint(medium) {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.project__card {
-    a {
-        img {
-            margin-bottom: 1.875rem;
-        }
-
-        h3 {
-            @include hover--gradient;
-        }
-
-        &:hover h3 {
-            color: var(--transparent);
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(1.875rem, 1.1607142857142858rem + 3.571428571428571vw, 4.375rem);
+        padding-bottom: 0px;
+        
+        @include breakpoint(medium) {
+            grid-template-columns: 1fr 1fr;
         }
     }
-}
 
+    &__card {
+        a {
+            img {
+                margin-bottom: 1.875rem;
+            }
+        
+            h3 {
+                @include hover--gradient;
+            }
+        
+            &:hover h3 {
+                color: var(--transparent);
+            }
+        }
+    }
+}
 
 .back {
     div {
