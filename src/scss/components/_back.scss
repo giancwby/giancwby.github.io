@@ -1,0 +1,26 @@
+@use '../../scss/base' as *;
+
+.back {
+    div {
+        a {
+            display: flex;
+            flex-direction: row;
+
+            img {
+                transition: all .1s ease-in-out;
+            }
+
+            h2 {
+                @include hover--gradient;
+            }
+
+            &:hover h2 {
+                color: var(--transparent);
+            }
+
+            &:hover img {
+                transform: translateX(-.8rem);
+            }
+        }
+    }
+}

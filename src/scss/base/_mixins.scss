@@ -23,7 +23,7 @@
         }
 }
 
-@mixin heroemoji--top {
+@mixin top {
     position: relative;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
     transition: opacity .4s ease;
 }
 
-@mixin heroemoji--behind {
+@mixin behind {
     position: absolute;
     top: 0;
     left: 0;

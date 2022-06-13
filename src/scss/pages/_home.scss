@@ -22,19 +22,19 @@
             }
         
             .smiling {
-                @include heroemoji--top;
+                @include top;
             }
                 
             .bigsmile {
-                @include heroemoji--behind;
+                @include behind;
             }
         
             .devilhorns {
-                @include heroemoji--top;
+                @include top;
             }
                 
             .waving {
-                @include heroemoji--behind;
+                @include behind;
             }
         }
         

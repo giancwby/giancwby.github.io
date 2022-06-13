@@ -252,6 +252,95 @@ footer ul {
   }
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, -0.1785714286rem + 7.1428571429vw, 6.25rem);
+}
+.category__header {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+.category__header img {
+  width: clamp(4.4375rem, 2.7053571429rem + 8.6607142857vw, 10.5rem);
+  margin-bottom: 1rem;
+}
+@media (min-width: 43.75em) {
+  .category__header img {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 43.75em) {
+  .category__header {
+    flex-direction: row;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.875rem, 1.1607142857rem + 3.5714285714vw, 4.375rem);
+}
+.list__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.875rem, 1.1607142857rem + 3.5714285714vw, 4.375rem);
+  padding-bottom: 0px;
+}
+@media (min-width: 43.75em) {
+  .list__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.list__card a img {
+  margin-bottom: clamp(0.625rem, 0.3125rem + 1.5625vw, 1.875rem);
+}
+.list__card a h3 {
+  background: var(--focus-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+.list__card a h3:hover, .list__card a h3:active {
+  color: var(--transparent);
+}
+.list__card a:hover h3 {
+  color: var(--transparent);
+}
+
+.back div a {
+  display: flex;
+  flex-direction: row;
+}
+.back div a img {
+  transition: all 0.1s ease-in-out;
+}
+.back div a h2 {
+  background: var(--focus-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--white);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+.back div a h2:hover, .back div a h2:active {
+  color: var(--transparent);
+}
+.back div a:hover h2 {
+  color: var(--transparent);
+}
+.back div a:hover img {
+  transform: translateX(-0.8rem);
+}
+
 .hero {
   display: grid;
   gap: 1.25rem;
@@ -399,93 +488,4 @@ footer ul {
 }
 .featured__text:hover, .featured__text:active {
   color: var(--transparent);
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.25rem, -0.1785714286rem + 7.1428571429vw, 6.25rem);
-}
-.category__header {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-}
-.category__header img {
-  width: clamp(4.4375rem, 2.7053571429rem + 8.6607142857vw, 10.5rem);
-  margin-bottom: 1rem;
-}
-@media (min-width: 43.75em) {
-  .category__header img {
-    margin-bottom: 0;
-    margin-left: 2rem;
-  }
-}
-@media (min-width: 43.75em) {
-  .category__header {
-    flex-direction: row;
-  }
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.875rem, 1.1607142857rem + 3.5714285714vw, 4.375rem);
-}
-.list__row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1.875rem, 1.1607142857rem + 3.5714285714vw, 4.375rem);
-  padding-bottom: 0px;
-}
-@media (min-width: 43.75em) {
-  .list__row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.list__card a img {
-  margin-bottom: 1.875rem;
-}
-.list__card a h3 {
-  background: var(--focus-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: var(--white);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: all 0.1s ease-in-out;
-}
-.list__card a h3:hover, .list__card a h3:active {
-  color: var(--transparent);
-}
-.list__card a:hover h3 {
-  color: var(--transparent);
-}
-
-.back div a {
-  display: flex;
-  flex-direction: row;
-}
-.back div a img {
-  transition: all 0.1s ease-in-out;
-}
-.back div a h2 {
-  background: var(--focus-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: var(--white);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: all 0.1s ease-in-out;
-}
-.back div a h2:hover, .back div a h2:active {
-  color: var(--transparent);
-}
-.back div a:hover h2 {
-  color: var(--transparent);
-}
-.back div a:hover img {
-  transform: translateX(-0.8rem);
 }/*# sourceMappingURL=main.css.map */
