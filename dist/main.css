@@ -126,14 +126,16 @@ nav {
   z-index: 100;
   padding: clamp(1.25rem, 1.0714285714rem + 0.8928571429vw, 1.875rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem);
   padding-bottom: 0;
+  transition: padding 0.2s ease-in;
 }
 nav ul {
   border-bottom: 2px solid var(--white);
-  padding-bottom: 30px;
+  padding-bottom: clamp(1.25rem, 1.0714285714rem + 0.8928571429vw, 1.875rem);
   margin-inline: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: padding 0.2s ease-in;
 }
 nav ul li a p {
   background: var(--focus-gradient);
