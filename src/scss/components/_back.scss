@@ -5,6 +5,7 @@
         a {
             display: flex;
             flex-direction: row;
+            width: fit-content;
 
             img {
                 transition: all .1s ease-in-out;

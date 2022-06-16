@@ -66,6 +66,10 @@ p.uppercase {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.project__cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .ui {
   width: clamp(0.9375rem, 0.4910714286rem + 2.2321428571vw, 2.5rem);
@@ -106,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 section {
-  padding: clamp(4.375rem, 3.28125rem + 5.46875vw, 8.75rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem) clamp(4.375rem, 2.1875rem + 10.9375vw, 13.125rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem);
+  padding: clamp(4.375rem, 3.90625rem + 2.34375vw, 6.25rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem) clamp(4.375rem, 3.90625rem + 2.34375vw, 6.25rem) clamp(1.25rem, 0.3571428571rem + 4.4642857143vw, 4.375rem);
   margin-inline: auto;
 }
 
@@ -210,6 +214,7 @@ footer ul {
 .cta {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  padding-bottom: clamp(4.375rem, 2.8273809524rem + 7.7380952381vw, 12.5rem);
 }
 .cta__firstemoji, .cta__link, .cta__secondemoji {
   grid-row: 1/2;
@@ -327,6 +332,9 @@ footer ul {
 .back div a {
   display: flex;
   flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .back div a img {
   transition: all 0.1s ease-in-out;
@@ -349,6 +357,12 @@ footer ul {
 }
 .back div a:hover img {
   transform: translateX(-0.8rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4.375rem;
 }
 
 .hero {
@@ -450,13 +464,9 @@ footer ul {
   color: var(--transparent);
 }
 .featured__image01 {
-  -o-object-fit: cover;
-     object-fit: cover;
   grid-area: image01;
 }
 .featured__image02 {
-  -o-object-fit: cover;
-     object-fit: cover;
   grid-area: image02;
 }
 .featured__description {

@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
+    padding-bottom: clamp(4.375rem, 2.8273809523809526rem + 7.738095238095238vw, 12.5rem);
+
     &__firstemoji, &__link, &__secondemoji {
         grid-row: 1 / 2;
     }    
