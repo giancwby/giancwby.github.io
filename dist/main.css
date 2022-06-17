@@ -292,6 +292,9 @@ footer ul {
     flex-direction: row;
   }
 }
+.category__header--illustration {
+  font-size: clamp(3rem, 1.4285714286rem + 7.8571428571vw, 11.25rem);
+}
 
 .list {
   display: flex;

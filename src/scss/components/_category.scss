@@ -23,5 +23,9 @@
         @include breakpoint(medium) {
             flex-direction: row;
         }
+
+        &--illustration {
+            font-size: clamp(3rem, 1.4285714285714284rem + 7.8571428571428585vw, 11.25rem);
+        }
     }
 }
