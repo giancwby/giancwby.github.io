@@ -11,6 +11,9 @@
     }    
 
     &__secondemoji {
+        -webkit-transform: rotate(-18deg);
+        -moz-transform: rotate(-18deg);
+        -o-transform: rotate(-18deg); 
         transform: rotate(-18deg);
         grid-column: 1 / 2;
         justify-self: end;
@@ -29,6 +32,9 @@
     }
 
     &__firstemoji {
+        -webkit-transform: rotate(18deg);
+        -moz-transform: rotate(18deg);
+        -o-transform: rotate(18deg); 
         transform: rotate(18deg);
         grid-column: -2 / -1;
         align-self: end;
